@@ -1,0 +1,11 @@
+<div class="content">
+	<div class="send-container">
+		<input type="text" name="messageInput" class="message-input" value="Send a message..." id="messageInput" ng-model="outgoingMessage"/>
+		<button class="btn btn-primary" ng-click="sendMessage()">Send message</button>
+	</div>
+	<hr>
+	<h3>Posted Messages</h3>
+	<ul>
+		<li class="alert" ng-repeat="message in messages">{{message}}</li>
+	</ul>
+</div>
