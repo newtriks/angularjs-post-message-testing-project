@@ -4,6 +4,10 @@ Example demonstrating communication between a wrapper and an Angular application
 
 ![image](https://f.cloud.github.com/assets/31971/479416/91c9780a-b812-11e2-971c-d3cbf9b4a98e.png)
 
+## Run
+
+Navigate to [wrapper.html](http://localhost:9000/wrapper.html)
+
 ## Support
 
 Currently postMessage is supported in all major browsers. Specific versions supported can be viewed [here](http://caniuse.com/#search=postmessage).
