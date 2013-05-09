@@ -2,6 +2,10 @@
 
 Example demonstrating communication between a wrapper and an Angular application within an IFrame using [postMessage](https://developer.mozilla.org/en/docs/DOM/window.postMessage).
 
+## Run
+
+Navigate to [wrapper.html](http://localhost:9000/wrapper.html)
+
 ## Support
 
 Currently postMessage is supported in all major browsers. Specific versions supported can be viewed [here](http://caniuse.com/#search=postmessage).
