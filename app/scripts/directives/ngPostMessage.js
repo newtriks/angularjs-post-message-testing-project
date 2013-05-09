@@ -21,7 +21,7 @@ angular.module('iframeCommunicationApp')
 					} catch (error) {
 						response = {message: e.data}
 						if(response.message === 'connect') {
-							scope.sender = event.source;
+							scope.sender = e.source;
 							response.message = "Successfully connected";
 						}
 					}
