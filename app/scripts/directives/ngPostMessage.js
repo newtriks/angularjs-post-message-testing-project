@@ -22,7 +22,6 @@ angular.module('iframeCommunicationApp')
 				$window.attachEvent("on" + 'message', handler);
 			}
 			function handler(e) {
-				console.log(scope.sender);
 				if (e && e.data) {
 					var response = null;
 					scope.sender = e.source;
