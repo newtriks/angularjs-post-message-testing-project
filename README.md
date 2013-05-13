@@ -96,6 +96,8 @@ On send message the controller calls the *outgoing* attribute on the service pas
 
 ### Tests
 
-**TODO**
+    karma start
+    grunt test:unit
+    grunt test:e2e
 
 
