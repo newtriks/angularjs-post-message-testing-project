@@ -33,15 +33,18 @@ $(document).ready(function() {
 		var response = $.parseJSON(e.data);
 		updateReceivedText("status = " + response.status + " message = " + response.message);
 	});
+
 	addEvent(document.querySelector('form'), 'submit', function(e) {
+		if (e.preventDefault) e.preventDefault();
 		var message = JSON.stringify({
 			message: document.getElementById("message").value
 		});
-		win.postMessage(message, '*');
+		var iframe = $('#iframe')[0];
+		iframe.contentWindow.postMessage(message, '*');
 		clearText();
-		if (e.preventDefault) e.preventDefault();
 		e.returnValue = false;
 	});
+	
 	addEvent(document.getElementById("message"), 'click', function(e) {
 		clearText();
 	});
