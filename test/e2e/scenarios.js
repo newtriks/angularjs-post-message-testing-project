@@ -3,16 +3,12 @@
 describe('iframeCommunicationApp App', function() {
 
 	beforeEach(function() {
-		browser().navigateTo('/wrapper.html');
+		browser().navigateTo('/');
 	});
 
 	describe('Main view', function() {
 		it('should display the correct route', function() {
-			expect(browser().location().path()).toBe('/wrapper.html');
-		});
-
-		it('should fail', function() {
-			expect(true).toBe(false);
+			expect(browser().location().path()).toBe('/');
 		});
 	});
 });
