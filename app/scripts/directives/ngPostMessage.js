@@ -16,13 +16,7 @@ angular.module('iframeCommunicationApp')
 			});
 		},
 		link: function postLink(scope, element, attrs) {
-			if ($window.addEventListener) {
-				$window.addEventListener('message', handler, false);
-			} else if ($window.attachEvent) {
-				$window.attachEvent("on" + 'message', handler);
-			}
-			function handler(e) {
-				console.log("DISPATCHED");
+			scope.sendMessageToService = function(e) {
 				if (e && e.data) {
 					var response = null;
 					scope.sender = e.source;
@@ -38,6 +32,11 @@ angular.module('iframeCommunicationApp')
 					}
 					postMessageService.messages(response.message);
 				}
+			}
+			if ($window.addEventListener) {
+				$window.addEventListener('message', scope.sendMessageToService, false);
+			} else if ($window.attachEvent) {
+				$window.attachEvent("on" + 'message', scope.sendMessageToService);
 			}
 		}
 	};

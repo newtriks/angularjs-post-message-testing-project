@@ -41,9 +41,7 @@ describe('Directive: ngPostMessage', function() {
 	});
 
 	it('should call messages method on postMessageService', function() {
-		var evt = document.createEvent('Event');
-		evt.initEvent('message', true, true);
-		testWindow.dispatchEvent(evt);
+		testWindow.addEventListener.mostRecentCall.args[1]({data:messages[0]});
 		expect(postMessageService.messages).toHaveBeenCalled();
 	});
 
