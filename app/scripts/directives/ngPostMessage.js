@@ -33,11 +33,7 @@ angular.module('iframeCommunicationApp')
 					postMessageService.messages(response.message);
 				}
 			}
-			if ($window.addEventListener) {
-				$window.addEventListener('message', scope.sendMessageToService, false);
-			} else if ($window.attachEvent) {
-				$window.attachEvent("on" + 'message', scope.sendMessageToService);
-			}
+			angular.element($window).bind('message', scope.sendMessageToService);
 		}
 	};
 });

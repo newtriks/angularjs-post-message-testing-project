@@ -39,6 +39,7 @@ $(document).ready(function() {
 		var message = JSON.stringify({
 			message: document.getElementById("message").value
 		});
+		console.log("sssss", message);
 		var iframe = $('#iframe')[0];
 		iframe.contentWindow.postMessage(message, '*');
 		clearText();
