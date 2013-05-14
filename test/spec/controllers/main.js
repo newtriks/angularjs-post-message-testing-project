@@ -50,4 +50,5 @@ describe('Controller: MainCtrl', function() {
     scope.sendMessage();
     expect(scope.outgoingMessage).toBe("");
   });
+  
 });
