@@ -99,5 +99,12 @@ On send message the controller calls the *outgoing* attribute on the service pas
     karma start
     grunt test:unit
     grunt test:e2e
+    
+### Browser tests
+
+So far:
+
+* **Windows:** IE8+, Chrome and Firefox seem to work fine.
+* **OS X:** Chrome, Safari and Firefox seem to work fine. 
 
 
